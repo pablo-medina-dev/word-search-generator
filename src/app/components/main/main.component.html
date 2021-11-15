@@ -1,25 +1,39 @@
 <div class="view-main">
-    <form [formGroup]="form" class="form-word-search" (ngSubmit)="generarSopa()">
+    <form [formGroup]="form" class="form-word-search" (ngSubmit)="generate()">
         <div class="field-row">
             <mat-form-field class="field-width" appearance="fill">
-                <mat-label>Ancho</mat-label>
+                <mat-label>Width</mat-label>
                 <input type="number" matInput formControlName="width">
+                <mat-error>
+                    Invalid width (Valid: 10-24)
+                </mat-error>
             </mat-form-field>
             <mat-form-field class="field-height" appearance="fill">
-                <mat-label>Alto</mat-label>
+                <mat-label>Height</mat-label>
                 <input type="number" matInput formControlName="height">
+                <mat-error>
+                    Invalid width (Valid: 10-30)
+                </mat-error>
             </mat-form-field>
         </div>
         <div class="field-row">
             <mat-form-field class="field-words" appearance="fill">
-                <mat-label>Palabras</mat-label>
-                <textarea matInput cdkTextareaAutosize placeholder="Ingresar palabras"
+                <mat-label>Words</mat-label>
+                <textarea matInput cdkFocusInitial cdkTextareaAutosize
+                    placeholder="Enter at least one word. Multi-line, commas and colons allowd as word separators."
                     formControlName="words"></textarea>
+                <mat-error>
+                    Please enter at least one word
+                </mat-error>
             </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" (click)="generarSopa">Generar</button>
+        <div class="buttons-row">
+            <button mat-raised-button color="primary" (click)="generate">GENERATE</button>
+            <button *ngIf="generated" mat-raised-button color="accent" printTitle="Word Search"
+                printSectionId="print-section" ngxPrint [useExistingCss]="true">PRINT</button>
+        </div>
     </form>
-    <div class="word-search-container" *ngIf="generated">
+    <div id="print-section" class="word-search-container" *ngIf="generated">
         <word-search-viewer [value]="generated"></word-search-viewer>
     </div>
 </div>

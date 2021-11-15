@@ -22,9 +22,27 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group(
       {
-        words: new FormControl('', { validators: Validators.required, updateOn: 'change' }),
-        width: new FormControl(24, { validators: Validators.required, updateOn: 'blur' }),
-        height: new FormControl(25, { validators: Validators.required, updateOn: 'blur' })
+        words: new FormControl(
+          '',
+          {
+            validators: Validators.required,
+            updateOn: 'change'
+          }
+        ),
+        width: new FormControl(
+          24,
+          {
+            validators: [Validators.required, Validators.min(10), Validators.max(24)],
+            updateOn: 'blur'
+          }
+        ),
+        height: new FormControl(
+          30,
+          {
+            validators: [Validators.required, Validators.min(10), Validators.max(30)],
+            updateOn: 'blur'
+          }
+        )
       }
     );
 
@@ -37,7 +55,7 @@ export class MainComponent implements OnInit {
       })
   }
 
-  generarSopa() {
+  generate() {
     if (this.form.valid) {
       const fv = this.form.value;
 
