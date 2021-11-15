@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatToolbarModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MainComponent } from './components/main/main.component';
 import { WordSearchViewerComponent } from './components/word-search-viewer/word-search-viewer.component';
@@ -22,6 +22,7 @@ import { NgxPrintModule } from 'ngx-print';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgxPrintModule,
+    MatToolbarModule,
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule
