@@ -17,3 +17,6 @@ Run `npm run dev` for a dev server. Navigate to `http://localhost:4200/`. The ap
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Acknowledgements
+Todd Hibbs for his fantastic javascript Word Search Generator
+https://github.com/toddhibbs/wordsearch
