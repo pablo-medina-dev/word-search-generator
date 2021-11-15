@@ -1,17 +1,22 @@
 <div class="view-main">
     <form [formGroup]="form" class="form-word-search" (ngSubmit)="generarSopa()">
-        <mat-form-field class="field-width" appearance="fill">
-            <mat-label>Ancho</mat-label>
-            <input type="number" matInput formControlName="width">
-        </mat-form-field>
-        <mat-form-field class="field-height" appearance="fill">
-            <mat-label>Alto</mat-label>
-            <input type="number" matInput formControlName="height">
-        </mat-form-field>
-        <mat-form-field class="field-words" appearance="fill">
-            <mat-label>Palabras</mat-label>
-            <textarea matInput cdkTextareaAutosize placeholder="Ingresar palabras" formControlName="words"></textarea>
-        </mat-form-field>
+        <div class="field-row">
+            <mat-form-field class="field-width" appearance="fill">
+                <mat-label>Ancho</mat-label>
+                <input type="number" matInput formControlName="width">
+            </mat-form-field>
+            <mat-form-field class="field-height" appearance="fill">
+                <mat-label>Alto</mat-label>
+                <input type="number" matInput formControlName="height">
+            </mat-form-field>
+        </div>
+        <div class="field-row">
+            <mat-form-field class="field-words" appearance="fill">
+                <mat-label>Palabras</mat-label>
+                <textarea matInput cdkTextareaAutosize placeholder="Ingresar palabras"
+                    formControlName="words"></textarea>
+            </mat-form-field>
+        </div>
         <button mat-raised-button color="primary" (click)="generarSopa">Generar</button>
     </form>
     <div class="word-search-container" *ngIf="generated">
