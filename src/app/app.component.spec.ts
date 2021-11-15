@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'generador-sl'`, () => {
+  it(`should have as title 'word-search-gen'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('generador-sl');
+    expect(app.title).toEqual('word-search-gen');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('generador-sl app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('word-search-gen app is running!');
   });
 });

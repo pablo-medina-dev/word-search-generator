@@ -15,6 +15,14 @@
             }
         }
 
+        .buttons-row {
+            display: flex;
+            flex-direction: row;
+            button {
+                margin: 0.5rem;
+            }
+        }
+
         mat-form-field {
             width: 100%;
         }

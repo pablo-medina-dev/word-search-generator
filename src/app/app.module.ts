@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MainComponent } from './components/main/main.component';
 import { WordSearchViewerComponent } from './components/word-search-viewer/word-search-viewer.component';
 import { MatSnackBarModule } from '@angular/material';
+import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MatSnackBarModule } from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    NgxPrintModule,
     MatInputModule,
     MatButtonModule,
     MatSnackBarModule

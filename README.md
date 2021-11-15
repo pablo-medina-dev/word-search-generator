@@ -4,8 +4,7 @@ A Word Search Puzzle Generator developed on Angular 8.
 
 ## Usage
 Put one or more words to add to the word search, along with its dimensions (width / height).
-Once the "Generate" button has been pressed, a word search will appear based on the indicated parameters.
-Use the print dialog provided by the browser (usually CTRL + P), to print the puzzle without the data upload form.
+Once the "Generate" button has been pressed, a word search will appear based on the indicated parameters. To print it, use the corresponding button.
 
 Please note that at the moment the application only supports A4 sheet size in portrait layout.
 
@@ -17,6 +16,10 @@ Run `npm run dev` for a dev server. Navigate to `http://localhost:4200/`. The ap
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Acknowledgements
-Todd Hibbs for his fantastic javascript Word Search Generator
-https://github.com/toddhibbs/wordsearch
+## Third-party modules
+
+| Module | URL
+|-|-
+|ngx-print|https://github.com/selemxmn/ngx-print
+|wordsearch-generator|https://github.com/toddhibbs/wordsearch
+
