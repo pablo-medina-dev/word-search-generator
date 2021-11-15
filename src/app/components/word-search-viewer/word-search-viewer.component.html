@@ -1,0 +1,16 @@
+<div class="word-search-viewer">
+    <ul class="word-list">
+        <li *ngFor="let word of value.words">
+            {{word}}
+        </li>
+    </ul>
+    <ul class="lines">
+        <li class="line" *ngFor="let line of value.lines">
+            <ul class="chars">
+                <li class="char" *ngFor="let ch of line.split(' ')">
+                    {{ch}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
