@@ -19,15 +19,17 @@
         flex-direction: row;
         flex-wrap: wrap;
         min-height: 4cm;
+        max-height: 4cm;
         justify-content: flex-start;
         align-content: flex-start;
+        overflow: hidden;
 
         li {
             margin: 0.25rem 0;
-            padding: 0.25rem 0.5rem;
+            padding: 0 0.5rem;
             text-transform: uppercase;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 14pt;
+            font-size: 10pt;
         }
 
         margin-bottom: 0.5cm;

@@ -60,7 +60,7 @@ export class MainComponent implements OnInit {
       const fv = this.form.value;
 
       // Get text area lines as rows
-      const wordsArray: string[] = fv.words.split(/\n/);
+      const wordsArray: string[] = fv.words.split(/[\n\,\;]/);
 
       // Remove spaces from each row
       const rawWordsArray: string[] = [];
@@ -69,8 +69,8 @@ export class MainComponent implements OnInit {
       });
 
       // Convert array to set to avoid repetitions
-      const wordsSet = new Set<string>(wordsArray);
-
+      const wordsSet = new Set<string>(rawWordsArray);
+      
       // Rebuild words array from set
       const parsedWords = [...wordsSet.keys()].sort();
 
