@@ -54,7 +54,7 @@ export class MainComponent implements OnInit {
       const wordsSet = new Set<string>(wordsArray);
 
       // Rebuild words array from set
-      const parsedWords = [...wordsSet.keys()];
+      const parsedWords = [...wordsSet.keys()].sort();
 
       const params: WordSearchGeneratorParams = {
         height: fv.height,
